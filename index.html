@@ -6,6 +6,31 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Guess The Number!!</h1>
+    Ho generato un numero casuale... prova a indovinarlo!
+    Hai ancora 5 tentativi
+
+    <form action="" method="get">
+        <input type="number" name="user_guess">
+        <input id="button" type="button" name="guess" value="indovina">
+    </form>
+
+    <script>
+        let button = document.querySelector("#button")
+
+        button.addEventListener("click", function(event){
+            console.log(event)
+            // Questa funzione viene eseguita SOLO dopo che l'utente clicca sul button
+            // 1. Prendo l'elemento HTML in cui l'utente ha scritto il numeri
+            // 2. Trasformo in intero il numero
+            // 3. Controllo valori
+            // 4. la console scrivo i risultati --> PER IL MOMENTO
+
+            
+        })
+
+    </script>
+
     <script type="text/javascript">
         function RandomNumber(min, max) {
         let casualNumber = Math.random()
@@ -34,12 +59,12 @@
         let win = false
 
         while(tries<5){
-            let inputNumber = prompt("Indovina il numero casuale compreso tra 1 e 100!")
+            // let inputNumber = prompt("Indovina il numero casuale compreso tra 1 e 100!")
             inputNumber = sanitize(inputNumber)
 
             while (inputNumber <= 0 || inputNumber > 100 || isNaN(inputNumber) || inputNumber === null){
                 console.log("Inserire un numero tra 1 e 100")
-                inputNumber = prompt("Indovina il numero casuale compreso tra 1 e 100!")
+                // inputNumber = prompt("Indovina il numero casuale compreso tra 1 e 100!")
             }
             inputNumber = sanitize(inputNumber)
             
@@ -60,7 +85,7 @@
             }   
         }
         if (win === false){
-                console.log("Hai perso!, il numero randomico era: "+ casualNumber)
+            console.log("Hai perso!, il numero randomico era: "+ casualNumber)
         }
 
     </script>
