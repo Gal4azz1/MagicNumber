@@ -24,6 +24,7 @@
 
         let tries = 0
         let casualNumber = RandomNumber(1, 100)
+        let win = false
         console.log(casualNumber)
 
         while(tries<5){
@@ -40,6 +41,7 @@
             if (inputNumber === casualNumber){
                 console.log("Bravo hai vinto!")
                 tries = 5
+                win = true
 
             }else{
                 if (inputNumber > casualNumber){
@@ -49,7 +51,10 @@
                     console.log("Numero troppo piccolo!")
                     tries += 1
                 }
-            }
+            }   
+        }
+        if (win === false){
+                console.log("Hai perso!, il numero randomico era "+ casualNumber)
         }
 
     </script>
